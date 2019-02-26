@@ -63,10 +63,10 @@ while True:
           + address[0] + ' and port number:' + str(address[1]))
     print(cnxn)
     print("Host name: " + str(cnxn.getpeername()))
-    print('Socket Family: ' + str(cnxn.family))
-    print('Socket Type: ' + str(cnxn.type))
-    print('Time out: ' + str(cnxn.timeout))
-    print('Socket Protocol: ' + str(cnxn.proto))
+    print('Socket Family: ' + str(cnxn.family))             #Print Socket Family
+    print('Socket Type: ' + str(cnxn.type))                 #Print the socket type
+    print('Time out: ' + str(cnxn.timeout))                 #Print total timeout
+    print('Socket Protocol: ' + str(cnxn.proto))            #Print the protocol name (using lib native function proto)
     conn = Thread(address[0], address[1], cnxn)
     conn.start()
     threads.append(conn)                                        # Appending the new connection

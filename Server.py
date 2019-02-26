@@ -54,7 +54,7 @@ except socket.error as msg:
     print(msg)  # Display error message if server binding failed
     sys.exit()
 
-tcpsocket.listen(10)                                               # Initializing the Server socket to listen to incoming Client connections
+tcpsocket.listen(100)                                               # Initializing the Server socket to listen to incoming Client connections
 print('Server is ready to accept connections')
 
 while True:

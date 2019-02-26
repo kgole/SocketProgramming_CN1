@@ -34,9 +34,9 @@ Endtime = time.time()                                              # Record time
 rdtriptime = Endtime - Starttime                                   # Calculate the Round Trip Time (RTT)
 
 print("\nRound Trip Time (RTT) : "+str(rdtriptime) + " Seconds ")   #Print calculated Round Trip Time
-print('Socket Family : '+str(tcpsocket.family))                     #Print Socket Family
-print('Socket Protocol : '+str(tcpsocket.proto))                    #Print the protocol name
-print('Socket Type : '+str(tcpsocket.type))                         #Print Socket Type
-print('Time out : '+str(tcpsocket.timeout))                         #Total time out
+print('Socket Family : '+str(tcpsocket.family))                     #Print Socket Family (using lib native function family)
+print('Socket Protocol : '+str(tcpsocket.proto))                    #Print the protocol name (using lib native function proto)
+print('Socket Type : '+str(tcpsocket.type))                         #Print Socket Type (using lib native function type)
+print('Time out : '+str(tcpsocket.timeout))                         #Total time out (using lib native function timeout)
 tcpsocket.close()                                                   # Close the Client Socket
 print('\nThe Connection is closed')

@@ -59,7 +59,7 @@ print('Server is ready to accept connections')
 
 while True:
     cnxn, address = tcpsocket.accept()                      # Establish the connection
-    print("\nClient is connected with Ip Address:"
+    print("\nClient is connected with Address:"
           + address[0] + ' and port number:' + str(address[1]))
     print(cnxn)
     print("Host name: " + str(cnxn.getpeername()))
